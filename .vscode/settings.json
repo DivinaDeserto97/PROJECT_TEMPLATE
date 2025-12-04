@@ -1,0 +1,26 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+
+  // .env automatisch laden (für Debug/Run-Konfigurationen)
+  "python.envFile": "${workspaceFolder}\\.env",
+
+  // Black als Formatter
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "python.formatting.provider": "black",
+
+  // Ruff als Linter + Fixer
+  "ruff.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.ruff": "explicit",
+    "source.organizeImports": "explicit"
+  },
+
+  // pytest als Test-Framework
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.cwd": "${workspaceFolder}",
+  "python.testing.pytestArgs": ["tests"]
+}
