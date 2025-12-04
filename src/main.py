@@ -50,7 +50,7 @@ def load_config() -> AppConfig:
 
 
 def setup_logging(config: AppConfig) -> logging.Logger:
-    logs_dir = Path("logs")
+    logs_dir = Path("testLogs")
     logs_dir.mkdir(exist_ok=True)
 
     log_path = logs_dir / "app.log"
